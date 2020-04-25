@@ -134,7 +134,7 @@ MorePosts.propTypes = {
 
 const edgeToArray = (data) => data.edges.map((edge) => edge.node);
 
-const Writing = () => (
+const Art = () => (
   <StaticQuery
     query={graphql`
       query MediumPostQuery {
@@ -184,8 +184,8 @@ const Writing = () => (
 
       return (
         isMediumUserDefined && (
-          <Section.Container id="writing" Background={Background}>
-            <Section.Header name="Writing" icon="✍️" label="writing" />
+          <Section.Container id="art" Background={Background}>
+            <Section.Header name="Art" icon="✍️" label="art" />
             <CardContainer minWidth="300px">
               {posts.map(({ Component, ...rest }) => (
                 <Fade bottom key={rest.id}>
@@ -200,4 +200,4 @@ const Writing = () => (
   />
 );
 
-export default Writing;
+export default Art;
